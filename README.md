@@ -19,4 +19,6 @@ pnpm exec eslint src --max-warnings=0
 
 ## Deployment
 
-This repository is configured for GitHub Pages through `.github/workflows/pages.yml`. Push `main` to `Wisemanking001/Wisemanking001.github.io`, then set GitHub Pages to deploy from GitHub Actions if the repository settings do not already do so.
+This repository is configured for GitHub Pages through `.github/workflows/pages.yml`. Push `main` to `Wisemanking001/WisdomBenson.github.io`, then set GitHub Pages to deploy from GitHub Actions if the repository settings do not already do so.
+
+Published URL: `https://wisemanking001.github.io/WisdomBenson.github.io/`

@@ -43,6 +43,8 @@ const navItems = [
 
 const emailAddress = "wisdom.benson@howard.edu"
 const phoneNumber = "+1 984-312-9015"
+const fromBase = (path: string) => `${import.meta.env.BASE_URL}${path}`
+const resumeHref = fromBase("wisdom-benson-resume.docx")
 
 const metrics = [
   { value: "5", label: "journal articles and thesis publications" },
@@ -56,7 +58,7 @@ const researchThreads = [
     eyebrow: "ZnO quantum dots",
     title: "First-principles modeling of finite oxide nanocrystals",
     body: "DFT, DFPT, and PDEP-GW workflows for band-edge control, phonon behavior, passivation chemistry, and size-dependent piezoelectric response.",
-    image: "/assets/zno-qd-coordinate-map.png",
+    image: fromBase("assets/zno-qd-coordinate-map.png"),
     alt: "Coordinate-indexing figure for ligand-passivated ZnO quantum dots.",
     icon: Atom,
   },
@@ -64,7 +66,7 @@ const researchThreads = [
     eyebrow: "Raman spectroscopy",
     title: "Temperature and excitation-power resolved Raman analysis",
     body: "Experimental and computational Raman pipelines for ZnO quantum dots, including linewidth, phonon confinement, and heating diagnostics.",
-    image: "/assets/raman-spectra.png",
+    image: fromBase("assets/raman-spectra.png"),
     alt: "Raw Raman spectra for a ZnO quantum dot power series.",
     icon: Microscope,
   },
@@ -72,7 +74,7 @@ const researchThreads = [
     eyebrow: "Perovskite photovoltaics",
     title: "Tin-lead alloy perovskites with multi-cation engineering",
     body: "Spin-coated thin-film synthesis and optical characterization focused on stability, near-IR tunability, and photovoltaic relevance.",
-    image: "/assets/qe-frontier-levels.png",
+    image: fromBase("assets/qe-frontier-levels.png"),
     alt: "Quantum Espresso frontier-level comparison chart for passivated ZnO quantum dots.",
     icon: Cpu,
   },
@@ -121,7 +123,7 @@ const journalArticles = [
     venue: "OALib",
     year: "2023",
     doi: "10.4236/oalib.1110363",
-    href: "https://doi.org/10.4236/oalib.1110363",
+    href: "https://www.oalib.com/articles/6798430",
     tags: ["MHD", "microchannel flow", "fluid dynamics"],
   },
 ]
@@ -361,7 +363,7 @@ function SiteHeader() {
                     </a>
                   </Button>
                   <Button asChild variant="outline">
-                    <a href="/wisdom-benson-resume.docx">
+                    <a href={resumeHref}>
                       <Download className="size-4" aria-hidden="true" />
                       Resume
                     </a>
@@ -381,7 +383,7 @@ function HeroSection() {
     <>
       <section id="top" data-slot="hero" className="hero-shell relative isolate overflow-hidden">
         <img
-          src="/assets/zno-qd-coordinate-map.png"
+          src={fromBase("assets/zno-qd-coordinate-map.png")}
           alt="Ligand-passivated ZnO quantum dot coordinate map."
           className="hero-image absolute inset-y-0 right-0 z-0 h-full w-full object-cover"
         />
@@ -410,7 +412,7 @@ function HeroSection() {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="/wisdom-benson-resume.docx">
+                <a href={resumeHref}>
                   <Download className="size-4" aria-hidden="true" />
                   Download resume
                 </a>
@@ -601,7 +603,7 @@ function CVSection() {
             </div>
             <div className="flex items-start lg:justify-end">
               <Button asChild size="lg">
-                <a href="/wisdom-benson-resume.docx">
+                <a href={resumeHref}>
                   <Download className="size-4" aria-hidden="true" />
                   Download DOCX
                 </a>
@@ -727,7 +729,7 @@ function ContactSection() {
       <div id="contact" className="grid scroll-mt-20 overflow-hidden rounded-lg border border-border bg-card lg:grid-cols-[0.82fr_1.18fr]">
         <div className="relative min-h-[28rem] border-b border-border lg:border-b-0 lg:border-r">
           <img
-            src="/assets/wisdom-benson-portrait.jpeg"
+            src={fromBase("assets/wisdom-benson-portrait.jpeg")}
             alt="Portrait of Wisdom Benson."
             className="h-full min-h-[28rem] w-full object-cover object-top"
           />
